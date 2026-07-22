@@ -17,15 +17,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
 
 :root {
-  --chassis: #14170f; --panel: #1c2118; --panel-line: #2b3223; --lcd: #0b170e;
-  --amber: #ffb020; --amber-dim: #7a5a1c; --signal: #5fb8ff;
-  --warn: #ff6b5e; --ok: #6fd88a; --full: #ff6b5e; --filling: #ffb020; --open: #6fd88a;
-  --paper: #d9d3bd; --paper-dim: #948e79; --radius: 8px;
+  --chassis: #f5f2e9; --panel: #ffffff; --panel-line: #e3ddc9; --lcd: #12200f;
+  --amber: #ffb020; --amber-text: #b3690a; --amber-dim: #c9a24a; --signal: #2f7dc4;
+  --warn: #d1483c; --ok: #2f9e57; --full: #d1483c; --filling: #b3690a; --open: #2f9e57;
+  --paper: #2c2a20; --paper-dim: #756f5c; --radius: 8px;
 }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--chassis); font-family: 'Inter', sans-serif; color: var(--paper); }
 .oc-root { max-width: 980px; margin: 0 auto; padding: 24px 20px 60px; }
-.oc-panel { background: var(--panel); border: 1px solid var(--panel-line); border-radius: var(--radius); padding: 20px; margin-bottom: 16px; position: relative; }
+.oc-panel { background: var(--panel); border: 1px solid var(--panel-line); border-radius: var(--radius); padding: 20px; margin-bottom: 16px; position: relative; box-shadow: 0 1px 3px rgba(44,42,32,0.06); }
 .oc-screw { position: absolute; width: 6px; height: 6px; border-radius: 50%; background: #0a0c08; box-shadow: inset 0 1px 1px rgba(255,255,255,0.15); }
 .oc-header .oc-screw:nth-child(1) { top: 10px; left: 10px; } .oc-header .oc-screw:nth-child(2) { top: 10px; right: 10px; }
 .oc-header .oc-screw:nth-child(3) { bottom: 10px; left: 10px; } .oc-header .oc-screw:nth-child(4) { bottom: 10px; right: 10px; }
@@ -36,7 +36,7 @@ body { margin: 0; background: var(--chassis); font-family: 'Inter', sans-serif; 
 .oc-subtitle { color: var(--paper-dim); font-size: 13px; margin: 4px 0 0; max-width: 46ch; line-height: 1.5; }
 .oc-stats { display: flex; gap: 18px; font-family: 'JetBrains Mono', monospace; }
 .oc-stat { text-align: right; }
-.oc-stat-num { font-size: 22px; font-weight: 600; color: var(--amber); display: block; line-height: 1; }
+.oc-stat-num { font-size: 22px; font-weight: 600; color: var(--amber-text); display: block; line-height: 1; }
 .oc-stat-label { font-size: 10px; color: var(--paper-dim); text-transform: uppercase; letter-spacing: 0.08em; }
 .oc-notice { font-size: 12.5px; color: var(--paper-dim); line-height: 1.6; border-left: 2px solid var(--amber-dim); padding-left: 12px; }
 .oc-notice b { color: var(--paper); }
@@ -52,7 +52,7 @@ body { margin: 0; background: var(--chassis); font-family: 'Inter', sans-serif; 
 .oc-view-toggle button { border: none; background: transparent; color: var(--paper-dim); font-family: 'Space Grotesk', sans-serif; font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 16px; cursor: pointer; }
 .oc-view-toggle button.active { background: var(--amber); color: #241a05; }
 .oc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 14px; }
-.oc-tile { background: var(--panel); border: 1px solid var(--panel-line); border-radius: var(--radius); padding: 16px; display: flex; flex-direction: column; gap: 10px; }
+.oc-tile { background: var(--panel); border: 1px solid var(--panel-line); border-radius: var(--radius); padding: 16px; display: flex; flex-direction: column; gap: 10px; box-shadow: 0 1px 3px rgba(44,42,32,0.06); }
 .oc-tile-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
 .oc-chip { font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; padding: 3px 8px; border-radius: 20px; border: 1px solid currentColor; }
 .oc-spots { font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; padding: 3px 8px; border-radius: 20px; font-weight: 600; }
@@ -61,7 +61,7 @@ body { margin: 0; background: var(--chassis); font-family: 'Inter', sans-serif; 
 .oc-led.fresh { background: var(--ok); box-shadow: 0 0 6px var(--ok); animation: oc-pulse 1.8s infinite; }
 .oc-led.warm { background: var(--amber-dim); }
 .oc-led.cold { background: #4a4738; }
-.oc-momentum { color: var(--amber); }
+.oc-momentum { color: var(--amber-text); font-weight: 600; }
 @keyframes oc-pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
 .oc-code-display { font-family: 'JetBrains Mono', monospace; font-size: 26px; font-weight: 600; letter-spacing: 0.12em; background: var(--lcd); border: 1px solid var(--panel-line); border-radius: 6px; padding: 8px 10px; text-align: center; color: var(--amber); text-shadow: 0 0 10px rgba(255,176,32,0.35); }
 .oc-name { font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 600; margin: 0; }
@@ -76,12 +76,12 @@ body { margin: 0; background: var(--chassis); font-family: 'Inter', sans-serif; 
 .oc-spots-select { font-size: 11px; background: var(--lcd); color: var(--paper); border: 1px solid var(--panel-line); border-radius: 20px; padding: 5px 8px; }
 .oc-empty { text-align: center; padding: 40px 20px; color: var(--paper-dim); font-size: 13.5px; }
 .oc-footnote { font-size: 11px; color: var(--paper-dim); text-align: center; margin-top: 18px; line-height: 1.6; }
-.oc-table-wrap { background: var(--panel); border: 1px solid var(--panel-line); border-radius: var(--radius); overflow: hidden; }
+.oc-table-wrap { background: var(--panel); border: 1px solid var(--panel-line); border-radius: var(--radius); overflow: hidden; box-shadow: 0 1px 3px rgba(44,42,32,0.06); }
 .oc-table { width: 100%; border-collapse: collapse; font-size: 13px; }
 .oc-table th { text-align: left; font-family: 'Space Grotesk', sans-serif; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--paper-dim); padding: 10px 12px; border-bottom: 1px solid var(--panel-line); }
 .oc-table td { padding: 9px 12px; border-bottom: 1px solid var(--panel-line); }
 .oc-table tr:last-child td { border-bottom: none; }
-.oc-table .oc-code-cell { font-family: 'JetBrains Mono', monospace; color: var(--amber); letter-spacing: 0.06em; }
+.oc-table .oc-code-cell { font-family: 'JetBrains Mono', monospace; color: var(--amber-text); letter-spacing: 0.06em; font-weight: 600; }
 .oc-copy-list-btn { font-size: 12px; }
 @media (max-width: 560px) { .oc-header { flex-direction: column; } .oc-table { font-size: 11.5px; } }
 </style>
@@ -93,29 +93,26 @@ body { margin: 0; background: var(--chassis); font-family: 'Inter', sans-serif; 
     <div class="oc-title-block">
       <span class="oc-dot"></span>
       <div>
-        <h1 class="oc-title">Open Channel</h1>
-        <p class="oc-subtitle">Community-run directory of PoC / ODMaster group codes. Submissions and updates run through GitHub Issues — expect a minute or two for a change to show up here.</p>
+        <h1 class="oc-title">TIDRADIO &amp; ODMaster Group Codes</h1>
+        <p class="oc-subtitle"><b>Open Channel</b> — a community-run directory of PoC / ODMaster group join codes. Submissions and updates run through GitHub Issues — expect a minute or two for a change to show up here.</p>
       </div>
     </div>
     <div class="oc-stats">
-      <div class="oc-stat"><span class="oc-stat-num" id="oc-stat-count">–</span><span class="oc-stat-label">Channels logged</span></div>
-      <div class="oc-stat"><span class="oc-stat-num" id="oc-stat-confirms">–</span><span class="oc-stat-label">Upvotes logged</span></div>
+      <div class="oc-stat" title="Total channels currently listed in the directory"><span class="oc-stat-num" id="oc-stat-count">–</span><span class="oc-stat-label">Channels logged</span></div>
+      <div class="oc-stat" title="Total 'still active' confirmations across every channel, all-time"><span class="oc-stat-num" id="oc-stat-confirms">–</span><span class="oc-stat-label">Upvotes logged</span></div>
     </div>
   </div>
 
   <div class="oc-panel">
-    <p class="oc-notice"><b>How this works:</b> every entry was added by an owner, not verified by anyone official. All the buttons below open a pre-filled GitHub Issue — you'll need a free GitHub account, and it takes a minute or two to show up after a bot processes it.</p>
-    <p class="oc-notice"><b>What upvotes mean:</b> we have no API access into TIDRADIO/ODMaster's backend, so there's no way to see real member counts. "Upvote" is one person, once per day, confirming a channel is worth joining — a proxy for activity, not a headcount. The "Spots" tag is self-reported by whoever's in the group.</p>
+    <p class="oc-notice" title="Anyone can submit a channel by filing a GitHub Issue — nothing here is verified by an official source.">Entries are self-reported, not officially verified — hover any button below for what it does.</p>
     <div class="oc-cta-row">
-      <a class="oc-btn oc-btn-primary" id="oc-new-link" href="#" target="_blank" rel="noopener">Log a channel</a>
-      <a class="oc-btn oc-btn-ghost" href="https://tidradio.com/pages/faqs" target="_blank" rel="noopener">TIDRADIO WhatsApp community</a>
-      <a class="oc-btn oc-btn-ghost" href="https://www.facebook.com/groups/tidpoc" target="_blank" rel="noopener">tidpoc (Facebook)</a>
+      <a class="oc-btn oc-btn-primary" id="oc-new-link" href="#" target="_blank" rel="noopener" title="Opens a pre-filled GitHub Issue to add a new channel. Requires a free GitHub account; appears here within a minute or two once a bot processes it.">Log a channel</a>
     </div>
   </div>
 
   <div class="oc-controls">
-    <input type="text" id="oc-search" placeholder="Search by name, code, or notes…">
-    <select id="oc-filter-cat">
+    <input type="text" id="oc-search" placeholder="Search by name, code, or notes…" title="Filter channels by name, join code, or notes text">
+    <select id="oc-filter-cat" title="Show only channels in a given category">
       <option value="all">All categories</option>
       <option value="Casual / Chat">Casual / Chat</option>
       <option value="Ham / Tech">Ham / Tech</option>
@@ -125,32 +122,32 @@ body { margin: 0; background: var(--chassis); font-family: 'Inter', sans-serif; 
       <option value="Off-Road / Travel">Off-Road / Travel</option>
       <option value="Other">Other</option>
     </select>
-    <select id="oc-filter-spots">
+    <select id="oc-filter-spots" title="Show only channels with a given self-reported spots status">
       <option value="all">Any status</option>
       <option value="Open">Open only</option>
       <option value="Filling up">Filling up</option>
     </select>
-    <select id="oc-sort">
+    <select id="oc-sort" title="Change the order channels are listed in">
       <option value="confirmed">Most recently confirmed</option>
       <option value="newest">Newest</option>
       <option value="popular">Most upvotes</option>
     </select>
     <div class="oc-view-toggle">
-      <button id="oc-view-grid" class="active">Grid</button>
-      <button id="oc-view-list">List</button>
+      <button id="oc-view-grid" class="active" title="Card view">Grid</button>
+      <button id="oc-view-list" title="Compact table view">List</button>
     </div>
   </div>
 
   <div id="oc-content"><div class="oc-empty">Tuning in…</div></div>
 
-  <p class="oc-footnote" id="oc-footnote">Data lives in this repo's <code>data/channels.json</code>, edited only by the submissions bot — the git history is the audit log. Voter identities are hashed before they're ever written to that file.</p>
+  <p class="oc-footnote" id="oc-footnote" title="No API access into TIDRADIO/ODMaster exists, so upvotes are a proxy for activity, not real member counts. GitHub usernames are hashed before being stored, so votes can't be traced back to a person.">Data lives in this repo's <code>data/channels.json</code>, edited only by the submissions bot — the git history is the audit log. Voter identities are hashed before they're ever written to that file.</p>
 </div>
 
 <script>
 // ---- Set this to your own "username/repo" before publishing ----
 const REPO = "Wey2shop/tidradio-group-codes";
 
-const CAT_COLORS = { "Casual / Chat":"#5fb8ff", "Ham / Tech":"#b79bf0", "Emergency / Prep":"#ff6b5e", "Regional":"#6fd88a", "International":"#ffb020", "Off-Road / Travel":"#e08a4a", "Other":"#948e79" };
+const CAT_COLORS = { "Casual / Chat":"#2f7dc4", "Ham / Tech":"#7d5cc9", "Emergency / Prep":"#d1483c", "Regional":"#2f9e57", "International":"#b3690a", "Off-Road / Travel":"#a8611f", "Other":"#756f5c" };
 
 let entries = [];
 let viewMode = 'grid';
@@ -206,19 +203,19 @@ function renderGrid(list) {
       <div class="oc-tile">
         <div class="oc-tile-top">
           <span class="oc-chip" style="color:${color}">${escapeHtml(e.category)}</span>
-          <span class="oc-spots" style="color:${e.spots==='Open'?'var(--open)':e.spots==='Full'?'var(--full)':'var(--filling)'};border:1px solid currentColor;">${escapeHtml(e.spots)}</span>
+          <span class="oc-spots" style="color:${e.spots==='Open'?'var(--open)':e.spots==='Full'?'var(--full)':'var(--filling)'};border:1px solid currentColor;" title="Self-reported by whoever's in the group, not verified">${escapeHtml(e.spots)}</span>
         </div>
-        <div class="oc-code-display">${escapeHtml(e.code)}</div>
+        <div class="oc-code-display" title="Join code — enter this in the TIDRADIO/ODMaster app to join the channel">${escapeHtml(e.code)}</div>
         <h3 class="oc-name">${escapeHtml(e.name)}</h3>
         ${e.models ? `<div class="oc-models">${escapeHtml(e.models)}</div>` : ''}
         ${e.notes ? `<div class="oc-notes">${escapeHtml(e.notes)}</div>` : ''}
-        <div class="oc-led-row"><span class="oc-led ${led.cls}"></span>${led.label} ${momentum}</div>
+        <div class="oc-led-row" title="${led.label} — based on the most recent 'still active' confirmation"><span class="oc-led ${led.cls}"></span>${led.label} ${momentum}</div>
         <div class="oc-meta">added by ${escapeHtml(e.addedBy || 'Anonymous')}, ${fmtDate(e.addedAt)}</div>
         <div class="oc-tile-actions">
-          <a class="oc-btn-mini confirm" href="${confirmUrl}" target="_blank" rel="noopener">Upvote (${e.upvotes||0})</a>
-          <a class="oc-btn-mini report" href="${reportUrl}" target="_blank" rel="noopener">Report inactive${e.reports ? ' ('+e.reports+')' : ''}</a>
-          <button class="oc-btn-mini copy" data-code="${escapeHtml(e.code)}">Copy code</button>
-          <select class="oc-spots-select" data-code="${escapeHtml(e.code)}">
+          <a class="oc-btn-mini confirm" href="${confirmUrl}" target="_blank" rel="noopener" title="Confirm this channel is still active. Opens a GitHub Issue; counts once per person per day.">Upvote (${e.upvotes||0})</a>
+          <a class="oc-btn-mini report" href="${reportUrl}" target="_blank" rel="noopener" title="Flag this channel as quiet or inactive. Opens a GitHub Issue; counts once per person per day.">Report inactive${e.reports ? ' ('+e.reports+')' : ''}</a>
+          <button class="oc-btn-mini copy" data-code="${escapeHtml(e.code)}" title="Copy this join code to your clipboard">Copy code</button>
+          <select class="oc-spots-select" data-code="${escapeHtml(e.code)}" title="Report a change in this channel's spots availability. Opens a GitHub Issue; counts once per person per day.">
             <option value="">Update spots…</option>
             <option value="Now open">Now open</option>
             <option value="Now filling up">Now filling up</option>
