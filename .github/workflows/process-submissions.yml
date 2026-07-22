@@ -1,0 +1,62 @@
+name: Process channel submissions
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  process:
+    if: >
+      contains(github.event.issue.labels.*.name, 'new-channel') ||
+      contains(github.event.issue.labels.*.name, 'channel-update')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Process issue
+        id: process
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
+          IS_NEW_CHANNEL: ${{ contains(github.event.issue.labels.*.name, 'new-channel') }}
+          IS_UPDATE: ${{ contains(github.event.issue.labels.*.name, 'channel-update') }}
+        run: python3 .github/scripts/process_issue.py
+
+      - name: Commit data update
+        if: steps.process.outputs.changed == 'true'
+        run: |
+          git config user.name "channel-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/channels.json
+          git commit -m "Update from issue #${{ github.event.issue.number }}"
+          git push
+
+      - name: Comment on issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const body = fs.readFileSync('comment.txt', 'utf8');
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: body
+            });
+
+      - name: Close issue
+        if: steps.process.outputs.should_close == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              state: 'closed'
+            });

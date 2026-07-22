@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://Wey2shop.github.io/tidradio-group-codes/sitemap.xml

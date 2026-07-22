@@ -1,0 +1,28 @@
+name: Update a channel
+description: Confirm activity, report it going quiet, or update how full it is
+title: "[Update] "
+labels: ["channel-update"]
+body:
+  - type: input
+    id: code
+    attributes:
+      label: Join code of the channel you're updating
+      placeholder: e.g. 913452
+    validations:
+      required: true
+  - type: dropdown
+    id: action
+    attributes:
+      label: What are you reporting?
+      options:
+        - "Still active (confirm)"
+        - "Seems inactive (report)"
+        - "Now open"
+        - "Now filling up"
+        - "Now full"
+    validations:
+      required: true
+  - type: textarea
+    id: note
+    attributes:
+      label: Extra context (optional)

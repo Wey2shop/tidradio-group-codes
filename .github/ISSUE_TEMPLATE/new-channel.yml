@@ -1,0 +1,62 @@
+name: Log a new channel
+description: Add a PoC / ODMaster group code to the directory
+title: "[New channel] "
+labels: ["new-channel"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Check the site first to avoid logging a duplicate code.
+  - type: input
+    id: name
+    attributes:
+      label: Group name
+      placeholder: e.g. Ask The World
+    validations:
+      required: true
+  - type: input
+    id: code
+    attributes:
+      label: Join code
+      placeholder: e.g. 913452
+    validations:
+      required: true
+  - type: input
+    id: models
+    attributes:
+      label: Radio / app compatibility
+      placeholder: e.g. ODMaster, all TIDRADIO PoC
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Casual / Chat
+        - Ham / Tech
+        - Emergency / Prep
+        - Regional
+        - International
+        - Off-Road / Travel
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: spots
+    attributes:
+      label: Spots available?
+      options:
+        - Open
+        - Filling up
+        - Full
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      placeholder: Active hours, language, house rules...
+  - type: input
+    id: handle
+    attributes:
+      label: Your handle (optional)
+      placeholder: Anonymous

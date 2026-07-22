@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TIDRADIO &amp; ODMaster Group Codes Directory | Open Channel</title>
+<meta name="description" content="Find and share TIDRADIO / ODMaster PoC radio group join codes. A free, community-run directory — browse active channels, log a new one, or confirm a code still works.">
+<link rel="canonical" href="https://Wey2shop.github.io/tidradio-group-codes/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TIDRADIO & ODMaster Group Codes Directory | Open Channel">
+<meta property="og:description" content="Find and share TIDRADIO / ODMaster PoC radio group join codes. A free, community-run directory of active channels.">
+<meta property="og:url" content="https://Wey2shop.github.io/tidradio-group-codes/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="TIDRADIO & ODMaster Group Codes Directory | Open Channel">
+<meta name="twitter:description" content="Find and share TIDRADIO / ODMaster PoC radio group join codes — a free, community-run directory.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --chassis: #14170f; --panel: #1c2118; --panel-line: #2b3223; --lcd: #0b170e;
+  --amber: #ffb020; --amber-dim: #7a5a1c; --signal: #5fb8ff;
+  --warn: #ff6b5e; --ok: #6fd88a; --full: #ff6b5e; --filling: #ffb020; --open: #6fd88a;
+  --paper: #d9d3bd; --paper-dim: #948e79; --radius: 8px;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--chassis); font-family: 'Inter', sans-serif; color: var(--paper); }
+.oc-root { max-width: 980px; margin: 0 auto; padding: 24px 20px 60px; }
+.oc-panel { background: var(--panel); border: 1px solid var(--panel-line); border-radius: var(--radius); padding: 20px; margin-bottom: 16px; position: relative; }
+.oc-screw { position: absolute; width: 6px; height: 6px; border-radius: 50%; background: #0a0c08; box-shadow: inset 0 1px 1px rgba(255,255,255,0.15); }
+.oc-header .oc-screw:nth-child(1) { top: 10px; left: 10px; } .oc-header .oc-screw:nth-child(2) { top: 10px; right: 10px; }
+.oc-header .oc-screw:nth-child(3) { bottom: 10px; left: 10px; } .oc-header .oc-screw:nth-child(4) { bottom: 10px; right: 10px; }
+.oc-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 14px; }
+.oc-title-block { display: flex; align-items: center; gap: 10px; }
+.oc-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--amber); box-shadow: 0 0 8px var(--amber); margin-top: 4px; flex-shrink: 0; }
+.oc-title { font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; margin: 0; }
+.oc-subtitle { color: var(--paper-dim); font-size: 13px; margin: 4px 0 0; max-width: 46ch; line-height: 1.5; }
+.oc-stats { display: flex; gap: 18px; font-family: 'JetBrains Mono', monospace; }
+.oc-stat { text-align: right; }
+.oc-stat-num { font-size: 22px; font-weight: 600; color: var(--amber); display: block; line-height: 1; }
+.oc-stat-label { font-size: 10px; color: var(--paper-dim); text-transform: uppercase; letter-spacing: 0.08em; }
+.oc-notice { font-size: 12.5px; color: var(--paper-dim); line-height: 1.6; border-left: 2px solid var(--amber-dim); padding-left: 12px; }
+.oc-notice b { color: var(--paper); }
+.oc-notice + .oc-notice { margin-top: 10px; }
+.oc-cta-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+.oc-btn { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 13px; cursor: pointer; border: none; border-radius: 6px; padding: 10px 18px; text-decoration: none; display: inline-block; }
+.oc-btn-primary { background: var(--amber); color: #241a05; }
+.oc-btn-ghost { background: transparent; border: 1px solid var(--panel-line); color: var(--paper); }
+.oc-controls { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; align-items: center; }
+.oc-controls input, .oc-controls select { background: var(--panel); border: 1px solid var(--panel-line); color: var(--paper); padding: 9px 12px; border-radius: 6px; font-size: 13px; font-family: 'Inter', sans-serif; }
+.oc-controls input { flex: 1; min-width: 160px; }
+.oc-view-toggle { display: flex; gap: 4px; background: var(--panel); border: 1px solid var(--panel-line); border-radius: 20px; padding: 3px; }
+.oc-view-toggle button { border: none; background: transparent; color: var(--paper-dim); font-family: 'Space Grotesk', sans-serif; font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 16px; cursor: pointer; }
+.oc-view-toggle button.active { background: var(--amber); color: #241a05; }
+.oc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 14px; }
+.oc-tile { background: var(--panel); border: 1px solid var(--panel-line); border-radius: var(--radius); padding: 16px; display: flex; flex-direction: column; gap: 10px; }
+.oc-tile-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+.oc-chip { font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; padding: 3px 8px; border-radius: 20px; border: 1px solid currentColor; }
+.oc-spots { font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; padding: 3px 8px; border-radius: 20px; font-weight: 600; }
+.oc-led-row { display: flex; align-items: center; gap: 6px; font-size: 10.5px; color: var(--paper-dim); flex-wrap: wrap; }
+.oc-led { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.oc-led.fresh { background: var(--ok); box-shadow: 0 0 6px var(--ok); animation: oc-pulse 1.8s infinite; }
+.oc-led.warm { background: var(--amber-dim); }
+.oc-led.cold { background: #4a4738; }
+.oc-momentum { color: var(--amber); }
+@keyframes oc-pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
+.oc-code-display { font-family: 'JetBrains Mono', monospace; font-size: 26px; font-weight: 600; letter-spacing: 0.12em; background: var(--lcd); border: 1px solid var(--panel-line); border-radius: 6px; padding: 8px 10px; text-align: center; color: var(--amber); text-shadow: 0 0 10px rgba(255,176,32,0.35); }
+.oc-name { font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 600; margin: 0; }
+.oc-models { font-size: 11px; color: var(--signal); }
+.oc-notes { font-size: 12.5px; color: var(--paper-dim); line-height: 1.5; }
+.oc-meta { font-size: 10.5px; color: var(--paper-dim); }
+.oc-tile-actions { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 2px; }
+.oc-btn-mini { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 11.5px; padding: 6px 10px; border-radius: 20px; cursor: pointer; background: transparent; border: 1px solid var(--panel-line); color: var(--paper); text-decoration: none; }
+.oc-btn-mini.confirm:hover { border-color: var(--ok); color: var(--ok); }
+.oc-btn-mini.report:hover { border-color: var(--warn); color: var(--warn); }
+.oc-btn-mini.copy:hover { border-color: var(--signal); color: var(--signal); }
+.oc-spots-select { font-size: 11px; background: var(--lcd); color: var(--paper); border: 1px solid var(--panel-line); border-radius: 20px; padding: 5px 8px; }
+.oc-empty { text-align: center; padding: 40px 20px; color: var(--paper-dim); font-size: 13.5px; }
+.oc-footnote { font-size: 11px; color: var(--paper-dim); text-align: center; margin-top: 18px; line-height: 1.6; }
+.oc-table-wrap { background: var(--panel); border: 1px solid var(--panel-line); border-radius: var(--radius); overflow: hidden; }
+.oc-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.oc-table th { text-align: left; font-family: 'Space Grotesk', sans-serif; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--paper-dim); padding: 10px 12px; border-bottom: 1px solid var(--panel-line); }
+.oc-table td { padding: 9px 12px; border-bottom: 1px solid var(--panel-line); }
+.oc-table tr:last-child td { border-bottom: none; }
+.oc-table .oc-code-cell { font-family: 'JetBrains Mono', monospace; color: var(--amber); letter-spacing: 0.06em; }
+.oc-copy-list-btn { font-size: 12px; }
+@media (max-width: 560px) { .oc-header { flex-direction: column; } .oc-table { font-size: 11.5px; } }
+</style>
+</head>
+<body>
+<div class="oc-root">
+  <div class="oc-panel oc-header" id="oc-header">
+    <span class="oc-screw"></span><span class="oc-screw"></span><span class="oc-screw"></span><span class="oc-screw"></span>
+    <div class="oc-title-block">
+      <span class="oc-dot"></span>
+      <div>
+        <h1 class="oc-title">Open Channel</h1>
+        <p class="oc-subtitle">Community-run directory of PoC / ODMaster group codes. Submissions and updates run through GitHub Issues — expect a minute or two for a change to show up here.</p>
+      </div>
+    </div>
+    <div class="oc-stats">
+      <div class="oc-stat"><span class="oc-stat-num" id="oc-stat-count">–</span><span class="oc-stat-label">Channels logged</span></div>
+      <div class="oc-stat"><span class="oc-stat-num" id="oc-stat-confirms">–</span><span class="oc-stat-label">Upvotes logged</span></div>
+    </div>
+  </div>
+
+  <div class="oc-panel">
+    <p class="oc-notice"><b>How this works:</b> every entry was added by an owner, not verified by anyone official. All the buttons below open a pre-filled GitHub Issue — you'll need a free GitHub account, and it takes a minute or two to show up after a bot processes it.</p>
+    <p class="oc-notice"><b>What upvotes mean:</b> we have no API access into TIDRADIO/ODMaster's backend, so there's no way to see real member counts. "Upvote" is one person, once per day, confirming a channel is worth joining — a proxy for activity, not a headcount. The "Spots" tag is self-reported by whoever's in the group.</p>
+    <div class="oc-cta-row">
+      <a class="oc-btn oc-btn-primary" id="oc-new-link" href="#" target="_blank" rel="noopener">Log a channel</a>
+      <a class="oc-btn oc-btn-ghost" href="https://tidradio.com/pages/faqs" target="_blank" rel="noopener">TIDRADIO WhatsApp community</a>
+      <a class="oc-btn oc-btn-ghost" href="https://www.facebook.com/groups/tidpoc" target="_blank" rel="noopener">tidpoc (Facebook)</a>
+    </div>
+  </div>
+
+  <div class="oc-controls">
+    <input type="text" id="oc-search" placeholder="Search by name, code, or notes…">
+    <select id="oc-filter-cat">
+      <option value="all">All categories</option>
+      <option value="Casual / Chat">Casual / Chat</option>
+      <option value="Ham / Tech">Ham / Tech</option>
+      <option value="Emergency / Prep">Emergency / Prep</option>
+      <option value="Regional">Regional</option>
+      <option value="International">International</option>
+      <option value="Off-Road / Travel">Off-Road / Travel</option>
+      <option value="Other">Other</option>
+    </select>
+    <select id="oc-filter-spots">
+      <option value="all">Any status</option>
+      <option value="Open">Open only</option>
+      <option value="Filling up">Filling up</option>
+    </select>
+    <select id="oc-sort">
+      <option value="confirmed">Most recently confirmed</option>
+      <option value="newest">Newest</option>
+      <option value="popular">Most upvotes</option>
+    </select>
+    <div class="oc-view-toggle">
+      <button id="oc-view-grid" class="active">Grid</button>
+      <button id="oc-view-list">List</button>
+    </div>
+  </div>
+
+  <div id="oc-content"><div class="oc-empty">Tuning in…</div></div>
+
+  <p class="oc-footnote" id="oc-footnote">Data lives in this repo's <code>data/channels.json</code>, edited only by the submissions bot — the git history is the audit log. Voter identities are hashed before they're ever written to that file.</p>
+</div>
+
+<script>
+// ---- Set this to your own "username/repo" before publishing ----
+const REPO = "Wey2shop/tidradio-group-codes";
+
+const CAT_COLORS = { "Casual / Chat":"#5fb8ff", "Ham / Tech":"#b79bf0", "Emergency / Prep":"#ff6b5e", "Regional":"#6fd88a", "International":"#ffb020", "Off-Road / Travel":"#e08a4a", "Other":"#948e79" };
+
+let entries = [];
+let viewMode = 'grid';
+
+function daysSince(iso) { if (!iso) return null; return Math.floor((Date.now() - new Date(iso).getTime()) / 86400000); }
+function fmtDate(iso) { return new Date(iso).toLocaleDateString(undefined, { month:'short', day:'numeric', year:'numeric' }); }
+function escapeHtml(str) { return String(str||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+function ledInfo(e) {
+  const d = daysSince(e.lastConfirmed);
+  if (d === null) return { cls:'cold', label:'Unconfirmed — be the first' };
+  if (d <= 14) return { cls:'fresh', label:`Confirmed active ${d===0?'today':d+'d ago'}` };
+  if (d <= 60) return { cls:'warm', label:`Last confirmed ${d}d ago` };
+  return { cls:'cold', label:`Not confirmed in ${d}d — might be quiet` };
+}
+
+function issueUrl(template, params) {
+  const q = new URLSearchParams({ template, ...params });
+  return `https://github.com/${REPO}/issues/new?${q.toString()}`;
+}
+
+function getFilteredSorted() {
+  const search = document.getElementById('oc-search').value.trim().toLowerCase();
+  const cat = document.getElementById('oc-filter-cat').value;
+  const spotsFilter = document.getElementById('oc-filter-spots').value;
+  const sort = document.getElementById('oc-sort').value;
+
+  let list = entries.filter(e => {
+    const matchesSearch = !search || (e.name+' '+e.code+' '+(e.notes||'')).toLowerCase().includes(search);
+    const matchesCat = cat === 'all' || e.category === cat;
+    const matchesSpots = spotsFilter === 'all' || e.spots === spotsFilter;
+    return matchesSearch && matchesCat && matchesSpots;
+  });
+
+  if (sort === 'newest') list.sort((a,b) => new Date(b.addedAt) - new Date(a.addedAt));
+  else if (sort === 'popular') list.sort((a,b) => (b.upvotes||0) - (a.upvotes||0));
+  else list.sort((a,b) => new Date(b.lastConfirmed||0) - new Date(a.lastConfirmed||0));
+
+  return list;
+}
+
+function renderGrid(list) {
+  if (list.length === 0) {
+    return `<div class="oc-empty">${entries.length === 0 ? 'No channels logged yet. Log the first one above.' : 'Nothing matches that search.'}</div>`;
+  }
+  return `<div class="oc-grid">${list.map(e => {
+    const led = ledInfo(e);
+    const color = CAT_COLORS[e.category] || CAT_COLORS.Other;
+    const confirmUrl = issueUrl('channel-update.yml', { code: e.code, action: 'Still active (confirm)' });
+    const reportUrl = issueUrl('channel-update.yml', { code: e.code, action: 'Seems inactive (report)' });
+    const momentum = e.upvotesToday ? `<span class="oc-momentum">· ${e.upvotesToday} today</span>` : '';
+    return `
+      <div class="oc-tile">
+        <div class="oc-tile-top">
+          <span class="oc-chip" style="color:${color}">${escapeHtml(e.category)}</span>
+          <span class="oc-spots" style="color:${e.spots==='Open'?'var(--open)':e.spots==='Full'?'var(--full)':'var(--filling)'};border:1px solid currentColor;">${escapeHtml(e.spots)}</span>
+        </div>
+        <div class="oc-code-display">${escapeHtml(e.code)}</div>
+        <h3 class="oc-name">${escapeHtml(e.name)}</h3>
+        ${e.models ? `<div class="oc-models">${escapeHtml(e.models)}</div>` : ''}
+        ${e.notes ? `<div class="oc-notes">${escapeHtml(e.notes)}</div>` : ''}
+        <div class="oc-led-row"><span class="oc-led ${led.cls}"></span>${led.label} ${momentum}</div>
+        <div class="oc-meta">added by ${escapeHtml(e.addedBy || 'Anonymous')}, ${fmtDate(e.addedAt)}</div>
+        <div class="oc-tile-actions">
+          <a class="oc-btn-mini confirm" href="${confirmUrl}" target="_blank" rel="noopener">Upvote (${e.upvotes||0})</a>
+          <a class="oc-btn-mini report" href="${reportUrl}" target="_blank" rel="noopener">Report inactive${e.reports ? ' ('+e.reports+')' : ''}</a>
+          <button class="oc-btn-mini copy" data-code="${escapeHtml(e.code)}">Copy code</button>
+          <select class="oc-spots-select" data-code="${escapeHtml(e.code)}">
+            <option value="">Update spots…</option>
+            <option value="Now open">Now open</option>
+            <option value="Now filling up">Now filling up</option>
+            <option value="Now full">Now full</option>
+          </select>
+        </div>
+      </div>`;
+  }).join('')}</div>`;
+}
+
+function renderList(list) {
+  if (list.length === 0) {
+    return `<div class="oc-empty">${entries.length === 0 ? 'No channels logged yet.' : 'Nothing matches that search.'}</div>`;
+  }
+  const rows = list.map(e => `
+    <tr>
+      <td>${escapeHtml(e.name)}</td>
+      <td class="oc-code-cell">${escapeHtml(e.code)}</td>
+      <td>${escapeHtml(e.category)}</td>
+      <td>${escapeHtml(e.spots)}</td>
+      <td>${e.upvotes||0}</td>
+      <td>${e.lastConfirmed ? fmtDate(e.lastConfirmed) : '—'}</td>
+    </tr>`).join('');
+  return `
+    <div class="oc-cta-row" style="margin-bottom:10px;">
+      <button class="oc-btn oc-btn-ghost oc-copy-list-btn" id="oc-copy-list">Copy list as text</button>
+    </div>
+    <div class="oc-table-wrap">
+      <table class="oc-table">
+        <thead><tr><th>Name</th><th>Code</th><th>Category</th><th>Spots</th><th>Upvotes</th><th>Last confirmed</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>`;
+}
+
+function render() {
+  const list = getFilteredSorted();
+  document.getElementById('oc-stat-count').textContent = entries.length;
+  document.getElementById('oc-stat-confirms').textContent = entries.reduce((s,e) => s + (e.upvotes||0), 0);
+  document.getElementById('oc-content').innerHTML = viewMode === 'grid' ? renderGrid(list) : renderList(list);
+}
+
+document.getElementById('oc-content').addEventListener('click', async (ev) => {
+  const copyBtn = ev.target.closest('button.copy');
+  if (copyBtn) {
+    try { await navigator.clipboard.writeText(copyBtn.dataset.code); copyBtn.textContent = 'Copied'; setTimeout(() => copyBtn.textContent = 'Copy code', 1500); } catch(e) {}
+    return;
+  }
+  const copyListBtn = ev.target.closest('#oc-copy-list');
+  if (copyListBtn) {
+    const list = getFilteredSorted();
+    const text = list.map(e => `${e.name} — ${e.code} — ${e.category}`).join('\n');
+    try { await navigator.clipboard.writeText(text); copyListBtn.textContent = 'Copied'; setTimeout(() => copyListBtn.textContent = 'Copy list as text', 1500); } catch(e) {}
+  }
+});
+
+document.getElementById('oc-content').addEventListener('change', (ev) => {
+  const sel = ev.target.closest('select.oc-spots-select');
+  if (!sel || !sel.value) return;
+  window.open(issueUrl('channel-update.yml', { code: sel.dataset.code, action: sel.value }), '_blank');
+  sel.value = '';
+});
+
+['oc-search','oc-filter-cat','oc-filter-spots','oc-sort'].forEach(id => {
+  document.getElementById(id).addEventListener('input', render);
+  document.getElementById(id).addEventListener('change', render);
+});
+
+document.getElementById('oc-view-grid').addEventListener('click', () => {
+  viewMode = 'grid';
+  document.getElementById('oc-view-grid').classList.add('active');
+  document.getElementById('oc-view-list').classList.remove('active');
+  render();
+});
+document.getElementById('oc-view-list').addEventListener('click', () => {
+  viewMode = 'list';
+  document.getElementById('oc-view-list').classList.add('active');
+  document.getElementById('oc-view-grid').classList.remove('active');
+  render();
+});
+
+document.getElementById('oc-new-link').href = issueUrl('new-channel.yml', {});
+
+async function load() {
+  try {
+    const res = await fetch('data/channels.json', { cache: 'no-store' });
+    entries = await res.json();
+  } catch (e) {
+    entries = [];
+    document.getElementById('oc-footnote').textContent = "Couldn't load data/channels.json — check the file exists and Pages is serving from the repo root.";
+  }
+  render();
+}
+load();
+setInterval(load, 60000);
+</script>
+</body>
+</html>
