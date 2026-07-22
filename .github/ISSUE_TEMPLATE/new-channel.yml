@@ -21,11 +21,6 @@ body:
       placeholder: e.g. 913452
     validations:
       required: true
-  - type: input
-    id: models
-    attributes:
-      label: Radio / app compatibility
-      placeholder: e.g. ODMaster, all TIDRADIO PoC
   - type: dropdown
     id: category
     attributes:

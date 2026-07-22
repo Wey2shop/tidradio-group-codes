@@ -93,7 +93,6 @@ def confirm_stats(entry, today):
 def handle_new_channel(fields, data):
     name = fields.get("Group name", "").strip()
     code = fields.get("Join code", "").strip()
-    models = fields.get("Radio / app compatibility", "").strip()
     category = fields.get("Category", "Other").strip() or "Other"
     spots = fields.get("Spots available?", "Open").strip() or "Open"
     notes = fields.get("Notes", "").strip()
@@ -115,7 +114,6 @@ def handle_new_channel(fields, data):
         "id": f"e{int(datetime.now().timestamp())}",
         "name": name,
         "code": code,
-        "models": models,
         "category": category,
         "spots": spots,
         "notes": notes,
