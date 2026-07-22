@@ -12,6 +12,32 @@ service required.
 - 👍 **Upvote** to confirm a channel's still active, or **report** one that's
   gone quiet. Both are rate-limited to once per person per day, per channel.
 
+## How to submit or update a channel
+
+Every submission is a GitHub Issue, opened from a form — you never need to
+add labels or edit anything yourself, GitHub applies the right one
+automatically based on which form you used:
+
+- **Log a new channel** (labeled `new-channel` behind the scenes) — use the
+  "Log a channel" button on the site, or open the
+  [new-channel form](https://github.com/Wey2shop/tidradio-group-codes/issues/new?template=new-channel.yml)
+  directly.
+  Fields: **Group name**, **Join code**, **Category**, **Spots available?**,
+  **Notes** (optional), **Your handle** (optional). A duplicate join code is
+  rejected automatically, so search the site first.
+
+- **Update a channel** (labeled `channel-update` behind the scenes) — use the
+  Upvote / Report inactive / Update spots controls on each channel's tile, or
+  open the
+  [channel-update form](https://github.com/Wey2shop/tidradio-group-codes/issues/new?template=channel-update.yml)
+  directly. Fields: **Join code** of the channel you're updating and **What
+  are you reporting?** (Still active / Seems inactive / Now open / Now
+  filling up / Now full). Limited to once per person per day, per channel,
+  per action.
+
+Either way: it needs a free GitHub account, the issue is public, and the
+change shows up on the site within a minute or two once the bot processes it.
+
 ## How it works
 
 There's no server or database behind this — `data/channels.json` in this repo

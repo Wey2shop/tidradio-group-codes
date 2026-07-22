@@ -82,6 +82,17 @@ body { margin: 0; background: var(--chassis); font-family: 'Inter', sans-serif; 
 .oc-table tr:last-child td { border-bottom: none; }
 .oc-table .oc-code-cell { font-family: 'JetBrains Mono', monospace; color: var(--amber-text); letter-spacing: 0.06em; font-weight: 600; }
 .oc-copy-list-btn { font-size: 12px; }
+.oc-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.oc-modal-backdrop { position: fixed; inset: 0; background: rgba(28,25,15,0.45); display: flex; align-items: center; justify-content: center; padding: 20px; z-index: 1000; }
+.oc-modal-backdrop[hidden] { display: none; }
+.oc-modal { background: var(--panel); border: 1px solid var(--panel-line); border-radius: var(--radius); max-width: 420px; width: 100%; padding: 22px; box-shadow: 0 16px 40px rgba(28,25,15,0.28); }
+.oc-modal h2 { font-family: 'Space Grotesk', sans-serif; font-size: 17px; margin: 0 0 8px; }
+.oc-modal > p { font-size: 12.5px; color: var(--paper-dim); line-height: 1.6; margin: 8px 0; }
+.oc-modal ul { margin: 10px 0; padding-left: 18px; font-size: 12.5px; color: var(--paper-dim); line-height: 1.65; }
+.oc-modal ul li b { color: var(--paper); }
+.oc-modal-agree { display: flex; align-items: flex-start; gap: 8px; font-size: 12.5px; line-height: 1.5; margin: 16px 0 4px; cursor: pointer; }
+.oc-modal-agree input { margin-top: 3px; flex-shrink: 0; }
+.oc-modal-actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 16px; }
 @media (max-width: 560px) { .oc-header { flex-direction: column; } .oc-table { font-size: 11.5px; } }
 </style>
 </head>
@@ -140,6 +151,30 @@ body { margin: 0; background: var(--chassis); font-family: 'Inter', sans-serif; 
   <div id="oc-content"><div class="oc-empty">Tuning in…</div></div>
 
   <p class="oc-footnote" id="oc-footnote" title="No API access into TIDRADIO/ODMaster exists, so upvotes are a proxy for activity, not real member counts. GitHub usernames are hashed before being stored, so votes can't be traced back to a person.">Data lives in this repo's <code>data/channels.json</code>, edited only by the submissions bot — the git history is the audit log. Voter identities are hashed before they're ever written to that file.</p>
+
+  <div class="oc-modal-backdrop" id="oc-submit-modal" hidden>
+    <div class="oc-modal" role="dialog" aria-modal="true" aria-labelledby="oc-modal-title">
+      <h2 id="oc-modal-title">Before you log a channel</h2>
+      <p>Clicking through opens a GitHub issue form asking for:</p>
+      <ul>
+        <li><b>Group name</b> — what the channel is called</li>
+        <li><b>Join code</b> — the exact PoC / ODMaster code</li>
+        <li><b>Category</b> — closest fit</li>
+        <li><b>Spots available?</b> — your best guess right now</li>
+        <li><b>Notes</b> — active hours, language, house rules (optional)</li>
+        <li><b>Your handle</b> — optional, shown as "added by"</li>
+      </ul>
+      <p>Requires a free GitHub account. The issue is public, and a duplicate join code will be rejected automatically — search above first. It appears here within a minute or two once processed.</p>
+      <label class="oc-modal-agree">
+        <input type="checkbox" id="oc-modal-agree-check">
+        I confirm this is a real, currently active channel I have the right to share, and I understand this submission will be public.
+      </label>
+      <div class="oc-modal-actions">
+        <button class="oc-btn oc-btn-ghost" id="oc-modal-cancel">Cancel</button>
+        <button class="oc-btn oc-btn-primary" id="oc-modal-continue" disabled>Continue to GitHub</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script>
@@ -295,7 +330,38 @@ document.getElementById('oc-view-list').addEventListener('click', () => {
   render();
 });
 
-document.getElementById('oc-new-link').href = issueUrl('new-channel.yml', {});
+const newChannelUrl = issueUrl('new-channel.yml', {});
+document.getElementById('oc-new-link').href = newChannelUrl;
+
+const submitModal = document.getElementById('oc-submit-modal');
+const modalAgreeCheck = document.getElementById('oc-modal-agree-check');
+const modalContinueBtn = document.getElementById('oc-modal-continue');
+
+function openSubmitModal() {
+  modalAgreeCheck.checked = false;
+  modalContinueBtn.disabled = true;
+  submitModal.hidden = false;
+  modalAgreeCheck.focus();
+}
+function closeSubmitModal() {
+  submitModal.hidden = true;
+}
+
+document.getElementById('oc-new-link').addEventListener('click', (ev) => {
+  ev.preventDefault();
+  openSubmitModal();
+});
+modalAgreeCheck.addEventListener('change', () => {
+  modalContinueBtn.disabled = !modalAgreeCheck.checked;
+});
+modalContinueBtn.addEventListener('click', () => {
+  if (modalContinueBtn.disabled) return;
+  window.open(newChannelUrl, '_blank');
+  closeSubmitModal();
+});
+document.getElementById('oc-modal-cancel').addEventListener('click', closeSubmitModal);
+submitModal.addEventListener('click', (ev) => { if (ev.target === submitModal) closeSubmitModal(); });
+document.addEventListener('keydown', (ev) => { if (ev.key === 'Escape' && !submitModal.hidden) closeSubmitModal(); });
 
 async function load() {
   try {
