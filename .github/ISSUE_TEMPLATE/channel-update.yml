@@ -7,6 +7,10 @@ body:
     id: code
     attributes:
       label: Join code of the channel you're updating
+      description: >-
+        Auto-filled when you click a button on the site — leave this as-is.
+        Changing it points your update at a different channel; typing one
+        that doesn't exist just fails safely with a comment, nothing breaks.
       placeholder: e.g. 913452
     validations:
       required: true

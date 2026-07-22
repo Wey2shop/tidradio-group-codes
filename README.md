@@ -63,3 +63,8 @@ votes can't be traced back to a person.
 - **No official verification.** Anyone with a free GitHub account can submit
   or update an entry — entries are self-reported, not vetted by TIDRADIO,
   ODMaster, or anyone official.
+- **The join code field isn't locked.** The Upvote / Report / Update-spots
+  buttons pre-fill the join code, but GitHub Issue Forms have no read-only
+  field option, so it can still be edited before submitting. If it's changed
+  to a code that doesn't exist, `process_issue.py` just replies that the
+  code wasn't found — it can't accidentally update the wrong channel.
