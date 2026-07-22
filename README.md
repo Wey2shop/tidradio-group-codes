@@ -1,4 +1,4 @@
-# TIDRADIO & ODMaster Group Codes — Open Channel
+# TIDRADIO & ODMaster Group Codes
 
 **Live site: https://Wey2shop.github.io/tidradio-group-codes/**
 
