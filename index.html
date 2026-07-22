@@ -82,6 +82,12 @@ body { margin: 0; background: var(--chassis); font-family: 'Inter', sans-serif; 
 .oc-table .oc-code-cell { font-family: 'JetBrains Mono', monospace; color: var(--amber-text); letter-spacing: 0.06em; font-weight: 600; }
 .oc-copy-list-btn { font-size: 12px; }
 .oc-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.oc-footer-panel { margin-top: 16px; }
+.oc-footer-lead { font-family: 'Space Grotesk', sans-serif; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--paper-dim); margin: 0 0 8px; }
+.oc-footer-links { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.oc-footer-links li { font-size: 12.5px; color: var(--paper-dim); line-height: 1.5; }
+.oc-footer-links a { color: var(--amber-text); font-weight: 600; text-decoration: none; }
+.oc-footer-links a:hover { text-decoration: underline; }
 .oc-modal-backdrop { position: fixed; inset: 0; background: rgba(28,25,15,0.45); display: flex; align-items: center; justify-content: center; padding: 20px; z-index: 1000; }
 .oc-modal-backdrop[hidden] { display: none; }
 .oc-modal { background: var(--panel); border: 1px solid var(--panel-line); border-radius: var(--radius); max-width: 420px; width: 100%; padding: 22px; box-shadow: 0 16px 40px rgba(28,25,15,0.28); }
@@ -148,6 +154,13 @@ body { margin: 0; background: var(--chassis); font-family: 'Inter', sans-serif; 
   </div>
 
   <div id="oc-content"><div class="oc-empty">Tuning in…</div></div>
+
+  <div class="oc-panel oc-footer-panel">
+    <p class="oc-footer-lead">More from me</p>
+    <ul class="oc-footer-links">
+      <li>Looking to send files via PoC? Check out <a href="https://AFTP.RF.GD" target="_blank" rel="noopener">AFTP</a> — my other project.</li>
+    </ul>
+  </div>
 
   <div class="oc-modal-backdrop" id="oc-submit-modal" hidden>
     <div class="oc-modal" role="dialog" aria-modal="true" aria-labelledby="oc-modal-title">
