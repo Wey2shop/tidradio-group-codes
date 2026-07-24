@@ -21,5 +21,22 @@
         "d": "2026-07-22"
       }
     ]
+  },
+  {
+    "id": "e1784925307",
+    "name": "True Talkers International",
+    "code": "141264",
+    "category": "Casual / Chat",
+    "spots": "Filling up",
+    "notes": "",
+    "addedBy": "Anonymous",
+    "addedAt": "2026-07-24T20:35:07.703209+00:00",
+    "upvotes": 0,
+    "upvotesToday": 0,
+    "upvotes7d": 0,
+    "reports": 0,
+    "lastConfirmed": null,
+    "lastUpdated": "2026-07-24T20:35:07.703216+00:00",
+    "actionLog": []
   }
 ]
