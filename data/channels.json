@@ -38,5 +38,22 @@
     "lastConfirmed": null,
     "lastUpdated": "2026-07-24T20:35:07.703216+00:00",
     "actionLog": []
+  },
+  {
+    "id": "e1784925422",
+    "name": "Campfire Chat",
+    "code": "151457",
+    "category": "Casual / Chat",
+    "spots": "Filling up",
+    "notes": "",
+    "addedBy": "Anonymous",
+    "addedAt": "2026-07-24T20:37:02.763639+00:00",
+    "upvotes": 0,
+    "upvotesToday": 0,
+    "upvotes7d": 0,
+    "reports": 0,
+    "lastConfirmed": null,
+    "lastUpdated": "2026-07-24T20:37:02.763647+00:00",
+    "actionLog": []
   }
 ]
