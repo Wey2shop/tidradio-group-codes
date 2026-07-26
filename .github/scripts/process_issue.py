@@ -106,8 +106,8 @@ def handle_new_channel(fields, data):
     existing = next((e for e in data if e["code"] == code), None)
     if existing:
         write_outputs(False, True,
-            f"A channel with code **{code}** already exists: **{existing['name']}**. "
-            f"If you meant to update it, please open a **Channel update** issue instead.")
+            f"A group with code **{code}** already exists: **{existing['name']}**. "
+            f"If you meant to update it, please open an **Update a group** issue instead.")
         return
 
     entry = {
@@ -134,13 +134,13 @@ def handle_new_channel(fields, data):
 
 
 def handle_update(fields, data):
-    code = fields.get("Join code of the channel you're updating", "").strip()
+    code = fields.get("Join code of the group you're updating", "").strip()
     action = fields.get("What are you reporting?", "").strip()
     entry = next((e for e in data if e["code"] == code), None)
 
     if not entry:
         write_outputs(False, True,
-            f"Couldn't find a channel with code **{code}**. Check the directory for the exact code and try again.")
+            f"Couldn't find a group with code **{code}**. Check the directory for the exact code and try again.")
         return
 
     key = ACTION_KEYS.get(action)

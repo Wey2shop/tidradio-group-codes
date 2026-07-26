@@ -1,4 +1,4 @@
-name: Update a channel
+name: Update a group
 description: Confirm activity, report it going quiet, or update how full it is
 title: "[Update] "
 labels: ["channel-update"]
@@ -6,10 +6,10 @@ body:
   - type: input
     id: code
     attributes:
-      label: Join code of the channel you're updating
+      label: Join code of the group you're updating
       description: >-
         Auto-filled when you click a button on the site — leave this as-is.
-        Changing it points your update at a different channel; typing one
+        Changing it points your update at a different group; typing one
         that doesn't exist just fails safely with a comment, nothing breaks.
       placeholder: e.g. 913452
     validations:

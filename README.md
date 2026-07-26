@@ -3,36 +3,36 @@
 **Live site: https://Wey2shop.github.io/tidradio-group-codes/**
 
 A free, community-run directory of PoC / ODMaster group join codes. Find a
-channel to join, log one you run, upvote channels that are still active, or
+group to join, add one you run, upvote groups that are still active, or
 flag ones that have gone quiet — all through GitHub, no account on any other
 service required.
 
-- 🔎 **Browse** channels by category, spots available, or search by name/code.
-- ➕ **Log a channel** in a couple of clicks — opens a pre-filled GitHub Issue.
-- 👍 **Upvote** to confirm a channel's still active, or **report** one that's
-  gone quiet. Both are rate-limited to once per person per day, per channel.
+- 🔎 **Browse** groups by category, spots available, or search by name/code.
+- ➕ **Add your group code** in a couple of clicks — opens a pre-filled GitHub Issue.
+- 👍 **Upvote** to confirm a group's still active, or **report** one that's
+  gone quiet. Both are rate-limited to once per person per day, per group.
 
-## How to submit or update a channel
+## How to submit or update a group
 
 Every submission is a GitHub Issue, opened from a form — you never need to
 add labels or edit anything yourself, GitHub applies the right one
 automatically based on which form you used:
 
-- **Log a new channel** (labeled `new-channel` behind the scenes) — use the
-  "Log a channel" button on the site, or open the
-  [new-channel form](https://github.com/Wey2shop/tidradio-group-codes/issues/new?template=new-channel.yml)
+- **Add a new group** (labeled `new-channel` behind the scenes) — use the
+  "Add your group code" button on the site, or open the
+  [new-group form](https://github.com/Wey2shop/tidradio-group-codes/issues/new?template=new-channel.yml)
   directly.
   Fields: **Group name**, **Join code**, **Category**, **Spots available?**,
   **Notes** (optional), **Your handle** (optional). A duplicate join code is
   rejected automatically, so search the site first.
 
-- **Update a channel** (labeled `channel-update` behind the scenes) — use the
-  Upvote / Report inactive / Update spots controls on each channel's tile, or
+- **Update a group** (labeled `channel-update` behind the scenes) — use the
+  Upvote / Report inactive / Update spots controls on each group's tile, or
   open the
-  [channel-update form](https://github.com/Wey2shop/tidradio-group-codes/issues/new?template=channel-update.yml)
-  directly. Fields: **Join code** of the channel you're updating and **What
+  [update-group form](https://github.com/Wey2shop/tidradio-group-codes/issues/new?template=channel-update.yml)
+  directly. Fields: **Join code** of the group you're updating and **What
   are you reporting?** (Still active / Seems inactive / Now open / Now
-  filling up / Now full). Limited to once per person per day, per channel,
+  filling up / Now full). Limited to once per person per day, per group,
   per action.
 
 Either way: it needs a free GitHub account, the issue is public, and the
@@ -50,7 +50,7 @@ auditable in the git history.
 
 There's no API into TIDRADIO/ODMaster's backend, so there's no way to see
 real member counts. "Upvote" is a proxy for activity, not a headcount — one
-person, once per calendar day, confirming a channel is worth joining. GitHub
+person, once per calendar day, confirming a group is worth joining. GitHub
 identities are hashed before anything is written to the public data file, so
 votes can't be traced back to a person.
 
@@ -67,4 +67,4 @@ votes can't be traced back to a person.
   buttons pre-fill the join code, but GitHub Issue Forms have no read-only
   field option, so it can still be edited before submitting. If it's changed
   to a code that doesn't exist, `process_issue.py` just replies that the
-  code wasn't found — it can't accidentally update the wrong channel.
+  code wasn't found — it can't accidentally update the wrong group.

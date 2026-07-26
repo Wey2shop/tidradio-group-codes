@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TIDRADIO &amp; ODMaster Group Codes Directory</title>
-<meta name="description" content="Find and share TIDRADIO / ODMaster PoC radio group join codes. A free, community-run directory — browse active channels, log a new one, or confirm a code still works.">
+<meta name="description" content="Find and share TIDRADIO / ODMaster PoC radio group join codes. A free, community-run directory — browse active groups, add your own, or confirm a code still works.">
 <link rel="canonical" href="https://Wey2shop.github.io/tidradio-group-codes/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="TIDRADIO & ODMaster Group Codes Directory">
-<meta property="og:description" content="Find and share TIDRADIO / ODMaster PoC radio group join codes. A free, community-run directory of active channels.">
+<meta property="og:description" content="Find and share TIDRADIO / ODMaster PoC radio group join codes. A free, community-run directory of active groups.">
 <meta property="og:url" content="https://Wey2shop.github.io/tidradio-group-codes/">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TIDRADIO & ODMaster Group Codes Directory">
@@ -112,21 +112,21 @@ body { margin: 0; background: var(--chassis); font-family: 'Inter', sans-serif; 
       </div>
     </div>
     <div class="oc-stats">
-      <div class="oc-stat" title="Total channels currently listed in the directory"><span class="oc-stat-num" id="oc-stat-count">–</span><span class="oc-stat-label">Channels logged</span></div>
-      <div class="oc-stat" title="Total 'still active' confirmations across every channel, all-time"><span class="oc-stat-num" id="oc-stat-confirms">–</span><span class="oc-stat-label">Upvotes logged</span></div>
+      <div class="oc-stat" title="Total groups currently listed in the directory"><span class="oc-stat-num" id="oc-stat-count">–</span><span class="oc-stat-label">Groups logged</span></div>
+      <div class="oc-stat" title="Total 'still active' confirmations across every group, all-time"><span class="oc-stat-num" id="oc-stat-confirms">–</span><span class="oc-stat-label">Upvotes logged</span></div>
     </div>
   </div>
 
   <div class="oc-panel">
-    <p class="oc-notice" title="Anyone can submit a channel by filing a GitHub Issue — nothing here is verified by an official source.">Entries are self-reported, not officially verified — hover any button below for what it does.</p>
+    <p class="oc-notice" title="Anyone can submit a group by filing a GitHub Issue — nothing here is verified by an official source.">Entries are self-reported, not officially verified — hover any button below for what it does.</p>
     <div class="oc-cta-row">
-      <a class="oc-btn oc-btn-primary" id="oc-new-link" href="#" target="_blank" rel="noopener" title="Opens a pre-filled GitHub Issue to add a new channel. Requires a free GitHub account; appears here within a minute or two once a bot processes it.">Log a channel</a>
+      <a class="oc-btn oc-btn-primary" id="oc-new-link" href="#" target="_blank" rel="noopener" title="Opens a pre-filled GitHub Issue to add a new group. Requires a free GitHub account; appears here within a minute or two once a bot processes it.">Add your group code</a>
     </div>
   </div>
 
   <div class="oc-controls">
-    <input type="text" id="oc-search" placeholder="Search by name, code, or notes…" title="Filter channels by name, join code, or notes text">
-    <select id="oc-filter-cat" title="Show only channels in a given category">
+    <input type="text" id="oc-search" placeholder="Search by name, code, or notes…" title="Filter groups by name, join code, or notes text">
+    <select id="oc-filter-cat" title="Show only groups in a given category">
       <option value="all">All categories</option>
       <option value="Casual / Chat">Casual / Chat</option>
       <option value="Ham / Tech">Ham / Tech</option>
@@ -136,12 +136,12 @@ body { margin: 0; background: var(--chassis); font-family: 'Inter', sans-serif; 
       <option value="Off-Road / Travel">Off-Road / Travel</option>
       <option value="Other">Other</option>
     </select>
-    <select id="oc-filter-spots" title="Show only channels with a given self-reported spots status">
+    <select id="oc-filter-spots" title="Show only groups with a given self-reported spots status">
       <option value="all">Any status</option>
       <option value="Open">Open only</option>
       <option value="Filling up">Filling up</option>
     </select>
-    <select id="oc-sort" title="Change the order channels are listed in">
+    <select id="oc-sort" title="Change the order groups are listed in">
       <option value="confirmed">Most recently confirmed</option>
       <option value="newest">Newest</option>
       <option value="popular">Most upvotes</option>
@@ -163,10 +163,10 @@ body { margin: 0; background: var(--chassis); font-family: 'Inter', sans-serif; 
 
   <div class="oc-modal-backdrop" id="oc-submit-modal" hidden>
     <div class="oc-modal" role="dialog" aria-modal="true" aria-labelledby="oc-modal-title">
-      <h2 id="oc-modal-title">Before you log a channel</h2>
+      <h2 id="oc-modal-title">Before you add your group</h2>
       <p>Clicking through opens a GitHub issue form asking for:</p>
       <ul>
-        <li><b>Group name</b> — what the channel is called</li>
+        <li><b>Group name</b> — what the group is called</li>
         <li><b>Join code</b> — the exact PoC / ODMaster code</li>
         <li><b>Category</b> — closest fit</li>
         <li><b>Spots available?</b> — your best guess right now</li>
@@ -176,7 +176,7 @@ body { margin: 0; background: var(--chassis); font-family: 'Inter', sans-serif; 
       <p>Requires a free GitHub account. The issue is public, and a duplicate join code will be rejected automatically — search above first. It appears here within a minute or two once processed.</p>
       <label class="oc-modal-agree">
         <input type="checkbox" id="oc-modal-agree-check">
-        I confirm this is a real, currently active channel I have the right to share, and I understand this submission will be public.
+        I confirm this is a real, currently active group I have the right to share, and I understand this submission will be public.
       </label>
       <div class="oc-modal-actions">
         <button class="oc-btn oc-btn-ghost" id="oc-modal-cancel">Cancel</button>
@@ -235,7 +235,7 @@ function getFilteredSorted() {
 
 function renderGrid(list) {
   if (list.length === 0) {
-    return `<div class="oc-empty">${loadError || (entries.length === 0 ? 'No channels logged yet. Log the first one above.' : 'Nothing matches that search.')}</div>`;
+    return `<div class="oc-empty">${loadError || (entries.length === 0 ? 'No groups logged yet. Add the first one above.' : 'Nothing matches that search.')}</div>`;
   }
   return `<div class="oc-grid">${list.map(e => {
     const led = ledInfo(e);
@@ -249,16 +249,16 @@ function renderGrid(list) {
           <span class="oc-chip" style="color:${color}">${escapeHtml(e.category)}</span>
           <span class="oc-spots" style="color:${e.spots==='Open'?'var(--open)':e.spots==='Full'?'var(--full)':'var(--filling)'};border:1px solid currentColor;" title="Self-reported by whoever's in the group, not verified">${escapeHtml(e.spots)}</span>
         </div>
-        <div class="oc-code-display" title="Join code — enter this in the TIDRADIO/ODMaster app to join the channel">${escapeHtml(e.code)}</div>
+        <div class="oc-code-display" title="Join code — enter this in the TIDRADIO/ODMaster app to join the group">${escapeHtml(e.code)}</div>
         <h3 class="oc-name">${escapeHtml(e.name)}</h3>
         ${e.notes ? `<div class="oc-notes">${escapeHtml(e.notes)}</div>` : ''}
         <div class="oc-led-row" title="${led.label} — based on the most recent 'still active' confirmation"><span class="oc-led ${led.cls}"></span>${led.label} ${momentum}</div>
         <div class="oc-meta">added by ${escapeHtml(e.addedBy || 'Anonymous')}, ${fmtDate(e.addedAt)}</div>
         <div class="oc-tile-actions">
-          <a class="oc-btn-mini confirm" href="${confirmUrl}" target="_blank" rel="noopener" title="Confirm this channel is still active. Opens a GitHub Issue; counts once per person per day.">Upvote (${e.upvotes||0})</a>
-          <a class="oc-btn-mini report" href="${reportUrl}" target="_blank" rel="noopener" title="Flag this channel as quiet or inactive. Opens a GitHub Issue; counts once per person per day.">Report inactive${e.reports ? ' ('+e.reports+')' : ''}</a>
+          <a class="oc-btn-mini confirm" href="${confirmUrl}" target="_blank" rel="noopener" title="Confirm this group is still active. Opens a GitHub Issue; counts once per person per day.">Upvote (${e.upvotes||0})</a>
+          <a class="oc-btn-mini report" href="${reportUrl}" target="_blank" rel="noopener" title="Flag this group as quiet or inactive. Opens a GitHub Issue; counts once per person per day.">Report inactive${e.reports ? ' ('+e.reports+')' : ''}</a>
           <button class="oc-btn-mini copy" data-code="${escapeHtml(e.code)}" title="Copy this join code to your clipboard">Copy code</button>
-          <select class="oc-spots-select" data-code="${escapeHtml(e.code)}" title="Report a change in this channel's spots availability. Opens a GitHub Issue; counts once per person per day.">
+          <select class="oc-spots-select" data-code="${escapeHtml(e.code)}" title="Report a change in this group's spots availability. Opens a GitHub Issue; counts once per person per day.">
             <option value="">Update spots…</option>
             <option value="Now open">Now open</option>
             <option value="Now filling up">Now filling up</option>
@@ -271,7 +271,7 @@ function renderGrid(list) {
 
 function renderList(list) {
   if (list.length === 0) {
-    return `<div class="oc-empty">${loadError || (entries.length === 0 ? 'No channels logged yet.' : 'Nothing matches that search.')}</div>`;
+    return `<div class="oc-empty">${loadError || (entries.length === 0 ? 'No groups logged yet.' : 'Nothing matches that search.')}</div>`;
   }
   const rows = list.map(e => `
     <tr>

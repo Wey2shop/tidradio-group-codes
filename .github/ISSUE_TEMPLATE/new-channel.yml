@@ -1,6 +1,6 @@
-name: Log a new channel
+name: Add a new group
 description: Add a PoC / ODMaster group code to the directory
-title: "[New channel] "
+title: "[New group] "
 labels: ["new-channel"]
 body:
   - type: markdown
