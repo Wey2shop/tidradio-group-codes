@@ -8,17 +8,22 @@
     "notes": "UK GB Talk group.",
     "addedBy": "Anonymous",
     "addedAt": "2026-07-22T13:18:01.479827+00:00",
-    "upvotes": 1,
+    "upvotes": 2,
     "upvotesToday": 1,
-    "upvotes7d": 1,
+    "upvotes7d": 2,
     "reports": 0,
-    "lastConfirmed": "2026-07-22T18:23:43.636527+00:00",
-    "lastUpdated": "2026-07-22T18:23:43.636541+00:00",
+    "lastConfirmed": "2026-07-28T11:56:03.981471+00:00",
+    "lastUpdated": "2026-07-28T11:56:03.981489+00:00",
     "actionLog": [
       {
         "h": "0f844ad54eb1d7c3",
         "a": "confirm",
         "d": "2026-07-22"
+      },
+      {
+        "h": "0f844ad54eb1d7c3",
+        "a": "confirm",
+        "d": "2026-07-28"
       }
     ]
   },
