@@ -59,12 +59,18 @@
     "notes": "",
     "addedBy": "Anonymous",
     "addedAt": "2026-07-24T20:37:02.763639+00:00",
-    "upvotes": 0,
-    "upvotesToday": 0,
-    "upvotes7d": 0,
+    "upvotes": 1,
+    "upvotesToday": 1,
+    "upvotes7d": 1,
     "reports": 0,
-    "lastConfirmed": null,
-    "lastUpdated": "2026-07-24T20:37:02.763647+00:00",
-    "actionLog": []
+    "lastConfirmed": "2026-07-31T17:33:05.906713+00:00",
+    "lastUpdated": "2026-07-31T17:33:05.906728+00:00",
+    "actionLog": [
+      {
+        "h": "0f844ad54eb1d7c3",
+        "a": "confirm",
+        "d": "2026-07-31"
+      }
+    ]
   }
 ]
