@@ -94,5 +94,22 @@
     "lastConfirmed": null,
     "lastUpdated": "2026-09-09T02:53:38.318376+00:00",
     "actionLog": []
+  },
+  {
+    "id": "e1789398977",
+    "name": "SHTF Group 1",
+    "code": "151335",
+    "category": "International",
+    "spots": "Open",
+    "notes": "A group where we can have an International brotherhood of peacekeepers that will give us all a heads up. Talking international anything",
+    "addedBy": "Iscariah",
+    "addedAt": "2026-09-14T15:16:17.625087+00:00",
+    "upvotes": 0,
+    "upvotesToday": 0,
+    "upvotes7d": 0,
+    "reports": 0,
+    "lastConfirmed": null,
+    "lastUpdated": "2026-09-14T15:16:17.625094+00:00",
+    "actionLog": []
   }
 ]
