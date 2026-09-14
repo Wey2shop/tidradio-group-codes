@@ -111,5 +111,22 @@
     "lastConfirmed": null,
     "lastUpdated": "2026-09-14T15:16:17.625094+00:00",
     "actionLog": []
+  },
+  {
+    "id": "e1789410239",
+    "name": "UK Wide",
+    "code": "179272",
+    "category": "Casual / Chat",
+    "spots": "Open",
+    "notes": "General chat with people across the Uk",
+    "addedBy": "Anonymous",
+    "addedAt": "2026-09-14T18:23:59.490593+00:00",
+    "upvotes": 0,
+    "upvotesToday": 0,
+    "upvotes7d": 0,
+    "reports": 0,
+    "lastConfirmed": null,
+    "lastUpdated": "2026-09-14T18:23:59.490603+00:00",
+    "actionLog": []
   }
 ]
