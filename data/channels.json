@@ -128,5 +128,22 @@
     "lastConfirmed": null,
     "lastUpdated": "2026-09-14T18:23:59.490603+00:00",
     "actionLog": []
+  },
+  {
+    "id": "e1789410671",
+    "name": "UK EV Char",
+    "code": "179274",
+    "category": "Casual / Chat",
+    "spots": "Open",
+    "notes": "Primarily set up for people that have a full EV or are thinking of buying one.\nHelp with hints and tips",
+    "addedBy": "Anonymous",
+    "addedAt": "2026-09-14T18:31:11.134171+00:00",
+    "upvotes": 0,
+    "upvotesToday": 0,
+    "upvotes7d": 0,
+    "reports": 0,
+    "lastConfirmed": null,
+    "lastUpdated": "2026-09-14T18:31:11.134179+00:00",
+    "actionLog": []
   }
 ]
