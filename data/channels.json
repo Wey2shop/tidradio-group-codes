@@ -173,5 +173,22 @@
     "lastConfirmed": null,
     "lastUpdated": "2026-09-19T23:41:35.973794+00:00",
     "actionLog": []
+  },
+  {
+    "id": "e1789861362",
+    "name": "Campfire Chat World",
+    "code": "180857",
+    "category": "Casual / Chat",
+    "spots": "Open",
+    "notes": "",
+    "addedBy": "Anonymous",
+    "addedAt": "2026-09-19T23:42:42.723612+00:00",
+    "upvotes": 0,
+    "upvotesToday": 0,
+    "upvotes7d": 0,
+    "reports": 0,
+    "lastConfirmed": null,
+    "lastUpdated": "2026-09-19T23:42:42.723620+00:00",
+    "actionLog": []
   }
 ]
