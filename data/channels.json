@@ -156,5 +156,22 @@
         "d": "2026-09-15"
       }
     ]
+  },
+  {
+    "id": "e1789861295",
+    "name": "Campfire chat 2.0",
+    "code": "171067",
+    "category": "Casual / Chat",
+    "spots": "Open",
+    "notes": "Campfire chat 2.0",
+    "addedBy": "Anonymous",
+    "addedAt": "2026-09-19T23:41:35.973786+00:00",
+    "upvotes": 0,
+    "upvotesToday": 0,
+    "upvotes7d": 0,
+    "reports": 0,
+    "lastConfirmed": null,
+    "lastUpdated": "2026-09-19T23:41:35.973794+00:00",
+    "actionLog": []
   }
 ]
