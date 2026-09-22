@@ -195,5 +195,22 @@
     "lastConfirmed": null,
     "lastUpdated": "2026-09-19T23:42:42.723620+00:00",
     "actionLog": []
+  },
+  {
+    "id": "e1790074865",
+    "name": "Around the table",
+    "code": "173512",
+    "category": "Casual / Chat",
+    "spots": "Open",
+    "notes": "",
+    "addedBy": "Anonymous",
+    "addedAt": "2026-09-22T11:01:05.696267+00:00",
+    "upvotes": 0,
+    "upvotesToday": 0,
+    "upvotes7d": 0,
+    "reports": 0,
+    "lastConfirmed": null,
+    "lastUpdated": "2026-09-22T11:01:05.696275+00:00",
+    "actionLog": []
   }
 ]
