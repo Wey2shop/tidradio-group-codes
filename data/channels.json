@@ -222,5 +222,22 @@
     "lastConfirmed": null,
     "lastUpdated": "2026-09-22T11:01:05.696275+00:00",
     "actionLog": []
+  },
+  {
+    "id": "e1794279874",
+    "name": "Mexico",
+    "code": "203805",
+    "category": "Emergency / Prep",
+    "spots": "Open",
+    "notes": "Diario, horario 8am a 10pm (24 horas para emergencias)\nIdioma Espa\u00f1ol\nUso informativo de su ciudad, emergencias, conocer gente para comunicarse y estar al tanto de cualquier noticia o situaci\u00f3n \n\n<img width=\"1080\" height=\"990\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/e802d126-69d3-4fd7-a3d7-06718f1ec523\" />",
+    "addedBy": "Thefknsanchez",
+    "addedAt": "2026-11-10T03:04:34.379029+00:00",
+    "upvotes": 0,
+    "upvotesToday": 0,
+    "upvotes7d": 0,
+    "reports": 0,
+    "lastConfirmed": null,
+    "lastUpdated": "2026-11-10T03:04:34.379042+00:00",
+    "actionLog": []
   }
 ]
