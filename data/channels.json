@@ -256,5 +256,22 @@
     "lastConfirmed": null,
     "lastUpdated": "2026-11-10T10:29:35.192411+00:00",
     "actionLog": []
+  },
+  {
+    "id": "e1794306961",
+    "name": "CB PL 19",
+    "code": "187548",
+    "category": "Casual / Chat",
+    "spots": "Open",
+    "notes": "",
+    "addedBy": "Anonymous",
+    "addedAt": "2026-11-10T10:36:01.011746+00:00",
+    "upvotes": 0,
+    "upvotesToday": 0,
+    "upvotes7d": 0,
+    "reports": 0,
+    "lastConfirmed": null,
+    "lastUpdated": "2026-11-10T10:36:01.011759+00:00",
+    "actionLog": []
   }
 ]
