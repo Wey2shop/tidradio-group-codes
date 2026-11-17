@@ -273,5 +273,22 @@
     "lastConfirmed": null,
     "lastUpdated": "2026-11-10T10:36:01.011759+00:00",
     "actionLog": []
+  },
+  {
+    "id": "e1794908152",
+    "name": "RADIO GATEWAY POLSKA",
+    "code": "200732",
+    "category": "Casual / Chat",
+    "spots": "Open",
+    "notes": "24/7 POLISH",
+    "addedBy": "Anonymous",
+    "addedAt": "2026-11-17T09:35:52.591991+00:00",
+    "upvotes": 0,
+    "upvotesToday": 0,
+    "upvotes7d": 0,
+    "reports": 0,
+    "lastConfirmed": null,
+    "lastUpdated": "2026-11-17T09:35:52.592008+00:00",
+    "actionLog": []
   }
 ]
