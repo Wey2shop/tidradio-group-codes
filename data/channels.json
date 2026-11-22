@@ -294,12 +294,18 @@
     "notes": "24/7 POLISH",
     "addedBy": "Anonymous",
     "addedAt": "2026-11-17T09:35:52.591991+00:00",
-    "upvotes": 0,
-    "upvotesToday": 0,
-    "upvotes7d": 0,
+    "upvotes": 1,
+    "upvotesToday": 1,
+    "upvotes7d": 1,
     "reports": 0,
-    "lastConfirmed": null,
-    "lastUpdated": "2026-11-17T09:35:52.592008+00:00",
-    "actionLog": []
+    "lastConfirmed": "2026-11-22T13:01:39.614764+00:00",
+    "lastUpdated": "2026-11-22T13:01:39.614784+00:00",
+    "actionLog": [
+      {
+        "h": "ba0e554ffbea2e36",
+        "a": "confirm",
+        "d": "2026-11-22"
+      }
+    ]
   }
 ]
