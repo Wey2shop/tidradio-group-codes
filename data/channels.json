@@ -297,13 +297,19 @@
     "notes": "",
     "addedBy": "Anonymous",
     "addedAt": "2026-11-10T10:36:01.011746+00:00",
-    "upvotes": 0,
-    "upvotesToday": 0,
-    "upvotes7d": 0,
+    "upvotes": 1,
+    "upvotesToday": 1,
+    "upvotes7d": 1,
     "reports": 0,
-    "lastConfirmed": null,
-    "lastUpdated": "2026-11-10T10:36:01.011759+00:00",
-    "actionLog": []
+    "lastConfirmed": "2026-11-28T10:19:57.605815+00:00",
+    "lastUpdated": "2026-11-28T10:19:57.605836+00:00",
+    "actionLog": [
+      {
+        "h": "ba0e554ffbea2e36",
+        "a": "confirm",
+        "d": "2026-11-28"
+      }
+    ]
   },
   {
     "id": "e1794908152",
